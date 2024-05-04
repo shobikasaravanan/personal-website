@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shobika Saravanan | portfolio</title>
+    <link href="./project.css" rel="stylesheet" />
+    <link href="./index.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section id="navbar"></section>
+
+    <header class="content center">
+        <div class="crop-img">
+            <img width="300" height="300" src="./images/pic.jpg" />
+        </div>
+
+        <div>
+            <h2 class="">Hi! I am Shobika Saravanan</h2>
+            <p>I'm a Frontend Engineer and a B.Tech graduate in Information Technology from India.
+                I've been programming for more than 5 years and have developed my passion towards frontend development.
+                I've developed many full-stack projects focusing on responsiveness, accessibility and performance.</p>
+            <div class="center"><button class="redirection-cta" type="button"><a class="no-anchor-class"
+                        href="./about.html">More about me</a></button></div>
+        </div>
+    </header>
+
+    <footer id="footer">
+    </footer>
+
+</body>
+
+<script>
+    fetch('./header.html')
+        .then(response => response.text()).then(data => { document.getElementById('navbar').innerHTML = data })
+
+    fetch('./footer.html')
+        .then(response => response.text()).then(data => { document.getElementById('footer').innerHTML = data })
+
+    function resumeDownload() {
+        const url = 'https://drive.google.com/file/d/1r8QWdyY03OtEvZsx2dkogAJfQut67NVq/view'
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'Shobika Resume.pdf';
+        link.dispatchEvent(new MouseEvent('click'))
+    }
+
+    function toggle() {
+        const dialog = document.getElementById('dialog');
+        dialog.classList.add('block')
+
+        const close = document.getElementById('close')
+        close.classList.remove('remove')
+        close.classList.add('block')
+
+        const open = document.getElementById('open')
+        open.classList.remove('block')
+        open.classList.add('remove')
+    }
+
+    function closeToggle() {
+        const dialog = document.getElementById('dialog');
+        dialog.classList.remove('block')
+
+        const close = document.getElementById('close')
+        close.classList.remove('block')
+        close.classList.add('remove')
+
+        const open = document.getElementById('open')
+        open.classList.remove('remove')
+        open.classList.add('block')
+
+    }
+
+</script>
+
+</html>

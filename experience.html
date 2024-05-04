@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shobika Saravanan | Experience</title>
+    <link href="./index.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section id="navbar"></section>
+    <section id="education  mb-50px">
+        <h2 class="sub-heading">Experience</h2>
+
+        <div class="education-section">
+            <div class="white-line"></div>
+
+            <article class="exp-card center direction-col">
+                <div class="badge z-index-1 center"><img width="70" height="70" src="./images/briefcase.png"></div>
+                <div class="center direction-col">
+                    <div class="timeline">October 2022 - At present</div>
+                    <div class="degree">Systematic Ventures</div>
+                    <div class="grade">Senior Frontend Engineer</div>
+                    <div class="college">Spearheaded the development of our finance application by leveraging frontend
+                        technologies like Tailwind CSS, React Query, and Next.js; led a project and successfully
+                        launched the MVP of the application within a 6-month timeframe. </div>
+                </div>
+
+            </article>
+
+            <article class="exp-card center direction-col">
+                <div class="badge z-index-1 center"><img width="70" height="70" src="./images/briefcase.png"></div>
+                <div class="center direction-col">
+                    <div class="timeline">September 2021 – October 2022
+                    </div>
+                    <div class="degree">Byjus
+                    </div>
+                    <div class="grade"> Software Engineer </div>
+                    <div class="college">Collaborated well with backend developers, designers, and content writers for
+                        developing features and product enhancement.
+                        Vigilantly handled bugs and delivered quality product on time incorporating SDLC, TDD and clean
+                        code.
+                    </div>
+                </div>
+            </article>
+
+            <article class="exp-card center direction-col">
+                <div class="badge z-index-1 center"><img width="70" height="70" src="./images/briefcase.png"></div>
+
+                <div class="center direction-col">
+                    <div class="timeline">May 2019 - May 2021</div>
+                    <div class="degree">Zoho Corporation</div>
+                    <div class="grade">Member Technical Staff</div>
+                    <div class="college">Led the frontend architecture of the procurement module and actively
+                        contributed to the development of an expense management system, ensuring a seamless user
+                        experience.
+                    </div>
+                </div>
+
+
+            </article>
+
+
+        </div>
+    </section>
+
+    <footer id="footer">
+    </footer>
+</body>
+
+<script>
+    fetch('./header.html')
+        .then(response => response.text()).then(data => { document.getElementById('navbar').innerHTML = data })
+
+    fetch('./footer.html')
+        .then(response => response.text()).then(data => { document.getElementById('footer').innerHTML = data })
+
+    function resumeDownload() {
+        console.log("download started")
+        const url = 'https://docs.google.com/document/d/1IVRp1qDmHWAKK5QcvA5cDuWI6hAHq7GbIG1Q_U0ZUvI/edit?usp=sharing'
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'Resume.pdf';
+        link.dispatchEvent(new MouseEvent('click'))
+        console.log("download end")
+    }
+
+    function toggle() {
+        console.log('inside')
+        const dialog = document.getElementById('dialog');
+        dialog.classList.add('block')
+
+        const close = document.getElementById('close')
+        close.classList.remove('remove')
+        close.classList.add('block')
+
+        const open = document.getElementById('open')
+        open.classList.remove('block')
+        open.classList.add('remove')
+    }
+
+    function closeToggle() {
+        const dialog = document.getElementById('dialog');
+        dialog.classList.remove('block')
+
+        const close = document.getElementById('close')
+        close.classList.remove('block')
+        close.classList.add('remove')
+
+        const open = document.getElementById('open')
+        open.classList.remove('remove')
+        open.classList.add('block')
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,37 @@
+<nav class="flex jc-space-between ai-center header">
+    <a class="wid-50 no-anchor-class ai-center title" href="./index.html">
+        <h1>Shobika Saravanan</h1>
+    </a>
+    <ul class="list flex wid-50 jc-space-between">
+        <li><a class="no-anchor-class" href="./index.html">Home</a></li>
+        <li><a class="no-anchor-class" href="./about.html">About</a></li>
+        <li><a class="no-anchor-class" href="./experience.html">Experience</a></li>
+        <li><a class="no-anchor-class resume" href="" onclick="resumeDownload()" target="_blank">
+                    Resume</a></li>
+    </ul>
+
+    <div class="dialog">
+        <button id="open" onclick="toggle()"><img width="20" height="20" src="./images/bread.png" /></button>
+        <button id="close" onclick="closeToggle()"><img width="20" height="20" src="./images/close.png" /></button>
+        </button>
+
+</nav>
+
+<div id="dialog" class="dialogModal">
+    <ul class="block menu">
+        <li>
+            <a class="no-anchor-class" onClick="closeToggle()" href="./index.html">Home</a>
+        </li>
+        <li>
+            <a class="no-anchor-class" onClick="closeToggle()" href="./about.html">About</a>
+        </li>
+        <li>
+            <a class="no-anchor-class" onClick="closeToggle()" href="./experience.html">Experience</a>
+        </li>
+        <li>
+            <a class="no-anchor-class" onClick="closeToggle()" href="" target="_blank">
+                <button class="no-btn-class" onclick="resumeDownload()">Resume</button>
+            </a>
+        </li>
+    </ul>
+</div>
