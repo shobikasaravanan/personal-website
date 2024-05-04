@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shobika Saravanan | portfolio</title>
+    <link href="./index.css" rel="stylesheet"/>
+    <link href="./project.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <section id="navbar"></section>
+    
+    <header class="center content">
+        <div>
+            <h2 class="">Hi! I am Shobika Saravanan</h2>
+
+            <p>I'm a Frontend Engineer and a B.Tech graduate in Information Technology from India.
+        I've been programming for more than 5 years and have developed my passion towards frontend development.
+        I've developed many full-stack projects focusing on responsiveness, accessibility and performance.</p>
+
+            <p>Thank you for spending some time to get to know me and my work! I'd love to chat some more, you can find me through email, Instagram, or LinkedIn! Find my links down below!
+
+                ​</p>
+
+
+        <div class="center"><button class="redirection-cta" type="button"><a class="no-anchor-class" href="./about.html">More about me</a></button></div>
+
+    </div>
+    </header>
+
+    <section id="projects">
+        <h2 class="sub-heading">Projects</h2>
+        <div>I enjoy to continue learning to improve my knowledge and to gain a completely new experience. You'll see some of the frontend & backend projects I've accomplished.
+        </div>
+        <div class="project-list">
+            <article>
+                <img  src="./images/work_hero.svg" />
+                <h2>Dietify</h2>
+                <div class="stack-tag"></div>
+                <p>DietGram is a social media app where diet enthusiasts can read, write and share all things diet.</p>
+                <div class="flex jc-flex-start sites">
+                    <a class="" target="_blank">Visit Site</a>
+                    <a class="" target="_blank">Source Code</a>
+                </div>
+            </article>
+
+            <article>
+                <img  src="./images/work_hero.svg" />
+                <h2>Dietify</h2>
+                <div class="stack-tag"></div>
+                <p>DietGram is a social media app where diet enthusiasts can read, write and share all things diet.</p>
+                <div class="flex jc-flex-start sites">
+                    <a class="" target="_blank">Visit Site</a>
+                    <a class="" target="_blank">Source Code</a>
+                </div>
+            </article>
+          
+        </div>
+
+        <!-- <div class="center"><button class="redirection-cta" type="button"><a href="./project.html" class="no-anchor-class">More Projects</a></button></div> -->
+    </section>
+
+    <footer id="footer">
+    </footer>
+
+</body>
+
+<script>
+    fetch('./header.html')
+      .then(response =>  response.text()).then(data=> { document.getElementById('navbar').innerHTML = data})
+
+    fetch('./footer.html')
+      .then(response =>  response.text()).then(data=> { document.getElementById('footer').innerHTML = data})
+
+    function resumeDownload() {
+        console.log("download started")
+        const url = 'https://docs.google.com/document/d/1IVRp1qDmHWAKK5QcvA5cDuWI6hAHq7GbIG1Q_U0ZUvI/edit?usp=sharing'
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'Resume.pdf';
+        link.dispatchEvent(new MouseEvent('click'))
+        console.log("download end")
+    }
+
+    function toggle() {
+        console.log('inside')
+        const dialog = document.getElementById('dialog');
+        dialog.classList.add('block')
+
+        const close = document.getElementById('close')
+        close.classList.remove('remove')
+        close.classList.add('block')
+
+        const open = document.getElementById('open')
+        open.classList.remove('block')
+        open.classList.add('remove')
+    }
+
+    function closeToggle() {
+        const dialog = document.getElementById('dialog');
+        dialog.classList.remove('block')
+
+        const close = document.getElementById('close')
+        close.classList.remove('block')
+        close.classList.add('remove')
+
+        const open = document.getElementById('open')
+        open.classList.remove('remove')
+        open.classList.add('block')
+
+    }
+
+</script>
+</html>

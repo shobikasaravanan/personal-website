@@ -1,0 +1,37 @@
+.redirection-cta {
+    background-color: transparent;
+    border-radius: 50px;
+    padding: 15px 20px;
+    margin: auto;
+    margin: 20px auto;
+}
+
+.project-list {
+    
+    margin-top: 30px;
+    width: 100%;
+
+    article {
+        margin: 15px auto;
+        padding: 15px;
+        border: 1px solid lightgray;
+        width: 45%;
+        max-width: 500px;
+        min-width: 300px;
+        border-radius: 6px;
+
+        img {
+            object-fit: cover;
+            height: 240px;
+        }
+        img:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        .sites a{
+            margin-right: 20px;
+            color: black; 
+            text-decoration: underline
+        }
+    }
+}
